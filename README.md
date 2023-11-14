@@ -1,10 +1,20 @@
-# TNoodle
+# TNoodle-docker
+<p align="center">
+	<a href="https://hub.docker.com/r/gentlehoneylover/tnoodle/"><img alt="Docker pulls" src="https://img.shields.io/docker/pulls/gentlehoneylover/tnoodle?logo=docker&label=Docker%20pulls"></a>
+	<a href="https://github.com/GentleHoneyLover/tnoodle-docker"><img alt="GitHub stars" src="https://img.shields.io/github/stars/gentlehoneylover/tnoodle-docker?logo=GitHub&label=GitHub%20stars&color=gold"></a>
+	<a href="https://github.com/GentleHoneyLover/tnoodle-docker"><img alt="GitHub issues" src="https://img.shields.io/github/issues/gentlehoneylover/tnoodle-docker?logo=GitHub&label=GitHub%20issues"></a>
+	<a href="https://actions-badge.atrox.dev/gentlehoneylover/tnoodle-docker/goto?ref=master"><img alt="GitHub Actions" src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fgentlehoneylover%2Ftnoodle-docker%2Fbadge%3Fref%3Dmaster&style=flat" /></a>
+</p><br>
 
-TNoodle is a software suite that contains the official WCA scramble program. It consists of the core scrambling code (primarily written in Kotlin) as well as a UI and server to generate a fully autonomous JAR file
+Run [TNoodle](https://www.worldcubeassociation.org/regulations/scrambles/) locally in a container without the need of installing java on the host.
 
 <p align="center">
 	<img src="https://raw.githubusercontent.com/thewca/tnoodle/master/tnoodle-server/src/main/resources/icons/tnoodle_logo_1024.png" alt="TNoodle Logo" height="128px"/>
 </p>
+
+## What is TNoodle
+
+TNoodle is a software suite that contains the official WCA scramble program. It generates scrambles for competitions.
 
 ## WCA Scramble Program
 
