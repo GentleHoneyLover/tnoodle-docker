@@ -34,16 +34,16 @@ You can pull it from the Docker Hub via:
 ```sh
 docker pull docker.io/gentlehoneylover/tnoodle:latest
 ```
-Run it via Docker CLI or docker-compose (examples below).
+Run it via [Docker CLI](https://docs.docker.com/engine/reference/commandline/cli/) or [docker-compose](https://docs.docker.com/compose/) (examples below). Make sure you have [Docker Engine](https://docs.docker.com/engine/install/) or [Docker Desktop](https://www.docker.com/get-started/) installed first.
 
 The Web UI of TNoodle is available at `http://<SERVER-IP>:2014`.
 
-## Example docker CLI command:
+## Example Docker CLI command:
 ```sh
 docker run -d \
   --name=tnoodle \
-  -p 2014:2014 \
   --restart unless-stopped \
+  -p 2014:2014 \
   docker.io/gentlehoneylover/tnoodle:latest
 ```
 
@@ -51,15 +51,15 @@ docker run -d \
 ```yaml
 version: "3"
 services:
-tnoodle:
+  tnoodle:
     container_name: tnoodle
     image: docker.io/gentlehoneylover/tnoodle:latest
-    ports:
-      - 2014:2014 #web-ui port 
     restart: unless-stopped
+    ports:
+      - 2014:2014
 ```
 
 ## Ports
-|  Port   | What it is for                                                         |
-| :-----: | ---------------------------------------------------------------------- |
-| `2014`  | Default port used by Web UI                                            |
+|  Port  | What it is for              |
+| :----: | --------------------------- |
+| `2014` | Default port used by Web UI |

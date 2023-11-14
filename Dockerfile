@@ -13,7 +13,7 @@ RUN \
 	ln -s /usr/lib/libfontconfig.so.1 /usr/lib/libfontconfig.so && \
 	ln -s /lib/libuuid.so.1 /usr/lib/libuuid.so.1 && \
 	ln -s /lib/libc.musl-x86_64.so.1 /usr/lib/libc.musl-x86_64.so.1 && \
-	echo "**** Create user and take folder ownership ****" && \
+	echo "**** Create user and take app folder ownership ****" && \
 	adduser -D -g '' $APPLICATION_USER && \
 	mkdir /app && \
 	chown -R $APPLICATION_USER /app && \
