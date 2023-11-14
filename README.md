@@ -30,4 +30,36 @@ Officially, `TNoodle-WCA` is a [scramble program](https://www.worldcubeassociati
 
 ## Installation
 
-TBD
+You can pull it from the Docker Hub via:
+```sh
+docker pull docker.io/gentlehoneylover/tnoodle:latest
+```
+Run it via Docker CLI or docker-compose (examples below).
+
+The Web UI of TNoodle is available at `http://<SERVER-IP>:2014`.
+
+## Example docker CLI command:
+```sh
+docker run -d \
+  --name=tnoodle \
+  -p 2014:2014 \
+  --restart unless-stopped \
+  docker.io/gentlehoneylover/tnoodle:latest
+```
+
+## Example compose file:
+```yaml
+version: "3"
+services:
+tnoodle:
+    container_name: tnoodle
+    image: docker.io/gentlehoneylover/tnoodle:latest
+    ports:
+      - 2014:2014 #web-ui port 
+    restart: unless-stopped
+```
+
+## Ports
+|  Port   | What it is for                                                         |
+| :-----: | ---------------------------------------------------------------------- |
+| `2014`  | Default port used by Web UI                                            |

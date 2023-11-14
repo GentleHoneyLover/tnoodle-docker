@@ -1,5 +1,7 @@
 FROM openjdk:8-jre-alpine
 
+LABEL maintainer="gentlehoneylover"
+
 ENV LD_LIBRARY_PATH /usr/lib
 ENV APPLICATION_USER=ktor
 ENV JAR_URL https://www.worldcubeassociation.org/regulations/scrambles/tnoodle/TNoodle-WCA-1.1.2.jar 
