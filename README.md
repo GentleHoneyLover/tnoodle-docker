@@ -14,7 +14,7 @@ Run [TNoodle](https://www.worldcubeassociation.org/regulations/scrambles/) local
 
 ## What is TNoodle
 
-TNoodle is a software suite that contains the official WCA scramble program. It generates scrambles for competitions.
+[TNoodle](https://github.com/thewca/tnoodle) is a software suite that contains the official WCA scramble program. It generates scrambles for competitions.
 
 ## WCA Scramble Program
 
@@ -36,7 +36,7 @@ docker pull docker.io/gentlehoneylover/tnoodle:latest
 ```
 Run it via [Docker CLI](https://docs.docker.com/engine/reference/commandline/cli/) or [docker-compose](https://docs.docker.com/compose/) (examples below). Make sure you have [Docker Engine](https://docs.docker.com/engine/install/) or [Docker Desktop](https://www.docker.com/get-started/) installed first.
 
-The Web UI of TNoodle is available at `http://<SERVER-IP>:2014`.
+The Web UI of TNoodle is available at `http://localhost:2014`.
 
 ## Example Docker CLI command:
 ```sh
