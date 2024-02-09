@@ -9,7 +9,7 @@
 Run [TNoodle](https://www.worldcubeassociation.org/regulations/scrambles/) locally in a container without the need of installing java on the host.
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/thewca/tnoodle/master/tnoodle-server/src/main/resources/icons/tnoodle_logo_1024.png" alt="TNoodle Logo" height="128px"/>
+	<img src="https://raw.githubusercontent.com/thewca/tnoodle/master/client/public/logo512.png" alt="TNoodle Logo" height="128px"/>
 </p>
 
 ## What is TNoodle
