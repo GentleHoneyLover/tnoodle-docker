@@ -4,7 +4,7 @@ FROM amazoncorretto:8-alpine3.18-jre
 LABEL maintainer="gentlehoneylover"
 
 ENV JAR_VER 1.1.2
-ENV JAR_URL https://www.worldcubeassociation.org/regulations/scrambles/tnoodle/TNoodle-WCA-$JAR_VER.jar
+ENV JAR_URL https://github.com/thewca/tnoodle/releases/download/v$JAR_VER/TNoodle-WCA-$JAR_VER.jar
 ENV LD_LIBRARY_PATH /usr/lib
 ENV APP_USER=ktor 
 
