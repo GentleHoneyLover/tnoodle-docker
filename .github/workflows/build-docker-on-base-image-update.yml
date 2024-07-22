@@ -21,7 +21,7 @@ jobs:
         id: baseupdatecheck
         uses: lucacome/docker-image-update-checker@v1
         with:
-          base-image: amazoncorretto:8-alpine3.18-jre
+          base-image: bellsoft/liberica-openjre-alpine:11
           image: ${{ secrets.DOCKERHUB_USERNAME }}/tnoodle:latest
 
       - name: Check result

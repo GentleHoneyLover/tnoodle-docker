@@ -1,12 +1,14 @@
-# FROM openjdk:8-jre-alpine
-FROM amazoncorretto:8-alpine3.18-jre
+# FROM amazoncorretto:8-alpine3.18-jre
+# FROM eclipse-temurin:22-jre-alpine
+FROM bellsoft/liberica-openjre-alpine:11
 
 LABEL maintainer="gentlehoneylover"
 
-ENV JAR_VER 1.1.2
+ENV JAR_VER 1.2.2
 ENV JAR_URL https://github.com/thewca/tnoodle/releases/download/v$JAR_VER/TNoodle-WCA-$JAR_VER.jar
 ENV LD_LIBRARY_PATH /usr/lib
-ENV APP_USER=ktor 
+ENV APPLICATION_USER=wca
+ENV PORT=${PORT:-2014}
 
 RUN \
 	echo "**** Install dependencies ****" && \
@@ -16,9 +18,9 @@ RUN \
 	ln -s /lib/libuuid.so.1 $LD_LIBRARY_PATH/libuuid.so.1 && \
 	ln -s /lib/libc.musl-x86_64.so.1 $LD_LIBRARY_PATH/libc.musl-x86_64.so.1 && \
 	echo "**** Create user and take app folder ownership ****" && \
-	adduser -D -g '' $APP_USER && \
+	adduser -D -g '' $APPLICATION_USER && \
 	mkdir /app && \
-	chown -R $APP_USER /app && \
+	chown -R $APPLICATION_USER /app && \
 	echo "**** Fetch the app .jar file ****" && \
 	wget -O /app/tnoodle-application.jar "$JAR_URL" && \
 	echo "**** Cleanup ****" && \
@@ -26,6 +28,7 @@ RUN \
 		$HOME/.cache \
 		/tmp/*
 
-USER $APP_USER
+USER $APPLICATION_USER
 WORKDIR /app
-CMD java -server -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -XX:InitialRAMFraction=2 -XX:MinRAMFraction=2 -XX:MaxRAMFraction=2 -XX:+UseG1GC -XX:MaxGCPauseMillis=100 -XX:+UseStringDeduplication -jar tnoodle-application.jar --online
+#CMD java -server -XX:+UnlockExperimentalVMOptions -XX:InitialRAMFraction=2 -XX:MinRAMFraction=2 -XX:MaxRAMFraction=2 -XX:+UseG1GC -XX:MaxGCPauseMillis=100 -XX:+UseStringDeduplication -jar tnoodle-application.jar --online -b
+CMD java -server -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:MaxGCPauseMillis=100 -XX:+UseStringDeduplication -jar tnoodle-application.jar --online -b
