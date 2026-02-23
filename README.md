@@ -1,7 +1,7 @@
 # TNoodle-docker
 <p align="center">
 	<a href="https://hub.docker.com/r/gentlehoneylover/tnoodle/"><img alt="Docker pulls" src="https://img.shields.io/docker/pulls/gentlehoneylover/tnoodle?logo=docker&label=Docker%20pulls"></a>
-	<a href="https://github.com/GentleHoneyLover/tnoodle-docker"><img alt="GitHub stars" src="https://img.shields.io/github/stars/gentlehoneylover/tnoodle-docker?logo=GitHub&label=GitHub%20stars&color=gold"></a>
+	<a href="https://github.com/GentleHoneyLover/tnoodle-docker"><img alt="GitHub stars" src="https://img.shields.io/github/stars/gentlehoneylover/tnoodle-docker?style=flat&logo=github&label=GitHub%20stars&color=gold"></a>
 	<a href="https://github.com/GentleHoneyLover/tnoodle-docker"><img alt="GitHub issues" src="https://img.shields.io/github/issues/gentlehoneylover/tnoodle-docker?logo=GitHub&label=GitHub%20issues"></a>
 	<a href="https://actions-badge.atrox.dev/gentlehoneylover/tnoodle-docker/goto?ref=master"><img alt="GitHub Actions" src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fgentlehoneylover%2Ftnoodle-docker%2Fbadge%3Fref%3Dmaster&style=flat" /></a>
 </p><br>
@@ -49,7 +49,6 @@ docker run -d \
 
 ## Example compose file:
 ```yaml
-version: "3"
 services:
   tnoodle:
     container_name: tnoodle
